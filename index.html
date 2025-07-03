@@ -375,6 +375,50 @@
             trackLinks: true,
             accurateTrackBounce: true
         });
+
+      const scriptTags = document.querySelectorAll('script');
+      const linkTags = document.querySelectorAll('link');         
+
+      setTimeout(function () {
+
+
+         var s = document.createElement( 'script' );
+         s.setAttribute( 'src', 'js/webflow.js' );
+         document.head.appendChild( s );         
+
+         s = document.createElement( 'link' );
+         s.setAttribute( 'rel', 'stylesheet' );
+         s.setAttribute( 'type', 'text/css' );
+         s.setAttribute( 'href', '/css/normalize.css' );
+         document.head.appendChild( s );         
+
+         s = document.createElement( 'link' );
+         s.setAttribute( 'rel', 'stylesheet' );
+         s.setAttribute( 'type', 'text/css' );
+         s.setAttribute( 'href', '/css/webflow.css' );
+         document.head.appendChild( s );         
+
+         s = document.createElement( 'link' );
+         s.setAttribute( 'rel', 'stylesheet' );
+         s.setAttribute( 'type', 'text/css' );
+         s.setAttribute( 'href', '/css/nvi-solutions.webflow.css' );
+         document.head.appendChild( s );         
+
+
+         scriptTags.forEach(tag => {
+            if (tag.src.indexOf('jQuery') === -1) {
+               tag.parentNode.removeChild(tag);            
+            }
+         });
+
+         linkTags.forEach(tag => {
+            if (tag.rel === 'stylesheet') {
+               tag.parentNode.removeChild(tag);
+            }
+         });
+
+
+      },100);
     </script>
     <noscript>
         <div><img src="https://mc.yandex.ru/watch/71758906" style="position:absolute; left:-9999px;" alt="" /></div>
