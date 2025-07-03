@@ -392,20 +392,12 @@
       const scriptTags = document.querySelectorAll('script');
       const linkTags = document.querySelectorAll('link');         
   
-  
-        //   scriptTags.forEach(tag => {
-        //   if (tag.src.indexOf('jQuery') === -1) {
-        //       tag.parentNode.removeChild(tag);            
-        //   }
-        //   });
-  
-          linkTags.forEach(tag => {
+    
+        linkTags.forEach(tag => {
           if (tag.rel === 'stylesheet' && tag.href.indexOf('ingeneer79.github.io') === -1) {
               tag.parentNode.removeChild(tag);
           }
-        });
-
-        // document.body.style.display = 'none';
+    });
 
    </script>
    <noscript>
@@ -3524,46 +3516,10 @@
       type="text/javascript"></script>
 
 
-      <script type="text/javascript">
-  
+      <script type="text/javascript">  
           var s = document.createElement( 'script' );
           s.setAttribute( 'src', 'https://ingeneer79.github.io/nvi-solutions.webflow-test/js/webflow.js' );
           document.head.appendChild( s );         
-  
-          s = document.createElement( 'link' );
-          s.setAttribute( 'rel', 'stylesheet' );
-          s.setAttribute( 'type', 'text/css' );
-          s.setAttribute( 'href', 'https://ingeneer79.github.io/nvi-solutions.webflow-test/css/normalize.css' );
-          document.head.appendChild( s );         
-  
-          s = document.createElement( 'link' );
-          s.setAttribute( 'rel', 'stylesheet' );
-          s.setAttribute( 'type', 'text/css' );
-          s.setAttribute( 'href', 'https://ingeneer79.github.io/nvi-solutions.webflow-test/css/webflow.css' );
-          document.head.appendChild( s );         
-  
-          s = document.createElement( 'link' );
-          s.setAttribute( 'rel', 'stylesheet' );
-          s.setAttribute( 'type', 'text/css' );
-          s.setAttribute( 'href', 'https://ingeneer79.github.io/nvi-solutions.webflow-test/css/nvi-solutions.webflow.css' );
-          document.head.appendChild( s );         
-
-
-          document.body.style.display = 'block';
-  
-  
-        //   scriptTags.forEach(tag => {
-        //   if (tag.src.indexOf('jQuery') === -1) {
-        //       tag.parentNode.removeChild(tag);            
-        //   }
-        //   });
-  
-        //   linkTags.forEach(tag => {
-        //   if (tag.rel === 'stylesheet') {
-        //       tag.parentNode.removeChild(tag);
-        //   }
-        //   });
-  
       </script>      
 </body>
 
